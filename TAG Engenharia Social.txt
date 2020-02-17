@@ -1,0 +1,7 @@
+﻿Giovanni Dhery Silva Prieto
+
+
+TAG Engenharia Social
+Phishing é um ataque que visa obter informações pessoais das vítimas através de falsos e-mails, sites, mensagens ou qualquer outro modo de comunicação, com o atacante se passando por alguém ou uma entidade confiável.
+Neste caso exemplo, abordaremos um phishing com envio de e-mails de uma falsa promoção especial de oferecimento de vale-viagem de um banco. A vítima receberá um e-mail do seu banco dizendo que ele poderá concorrer à promoção, e ainda nessa mensagem terá uma URL falsa que irá direcionar a pessoa para uma cópia do site do banco, tendo seus dados roubados ao tentar fazer login.
+Para isso, a mensagem pode passar a impressão de  urgência e que a promoção não durará por muito tempo, além de tentar imitar o corpo das mensagens do banco. Com a finalidade de parecer mais autêntico, pode-se comprar uma licença de domínio e-mail com o nome parecido com o original. A URL falsa pode ser criada com a ferramenta EvilURL, fazendo um IDN homograph attack, tendo problema na hora em que o link é exibido no navegador, dependendo do que a vítima usar. Para clonar o site e roubar os dados, podemos usar a ferramenta SET.
