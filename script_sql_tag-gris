@@ -1,0 +1,46 @@
+CREATE DATABASE ps_gris;
+USE ps_gris;
+
+CREATE TABLE Candidato (
+nome VARCHAR(80),
+DRE INT PRIMARY KEY,
+curso ENUM('cursos'),
+email VARCHAR(80),
+telegram VARCHAR(50),
+notebook BOOLEAN
+);
+
+CREATE TABLE Palestrante (
+nome VARCHAR(80),
+ID INT AUTO_INCREMENT PRIMARY KEY,
+formacao VARCHAR(80),
+email VARCHAR(80),
+telegram VARCHAR(50)
+);
+
+CREATE TABLE Ouvinte (
+nome VARCHAR(80),
+CPF INT PRIMARY KEY,
+UFRJ BOOLEAN,
+contato_1 VARCHAR(50),
+contato_2 VARCHAR(50)
+);
+
+CREATE TABLE TAG (
+assunto VARCHAR(50),
+descricao VARCHAR(500),
+entrega DATE,
+ID INT AUTO_INCREMENT PRIMARY KEY
+);
+
+CREATE TABLE Avaliacao(
+ID_TAG INT,
+DRE_Candidato INT,
+ID_Palestrante INT,
+nota INT,
+ID_Avaliacao INT AUTO_INCREMENT PRIMARY KEY
+);
+
+ALTER TABLE avaliacao ADD CONSTRAINT fk_TAG FOREIGN KEY (ID_TAG) REFERENCES TAG (ID);
+ALTER TABLE avaliacao ADD CONSTRAINT fk_Candidato FOREIGN KEY (DRE_Candidato) REFERENCES Candidato (DRE);
+ALTER TABLE avaliacao ADD CONSTRAINT fk_Palestrante FOREIGN KEY (ID_Palestrante) REFERENCES Palestrante (ID);
